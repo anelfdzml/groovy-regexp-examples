@@ -6,7 +6,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "me.champeau.gradle:jmh-gradle-plugin:0.4.8"
+        classpath "me.champeau.gradle:jmh-gradle-plugin:0.5.0"
     }
 }
 
@@ -20,11 +20,11 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.5.6'
+    implementation 'org.codehaus.groovy:groovy-all:2.5.6'
 }
 
 jmh {
-    include = ['bench\\.*']
+    include = ['\\.*']
     benchmarkMode = ['avgt']
     timeUnit = 'us'
     iterations = 60
